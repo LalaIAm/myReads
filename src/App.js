@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import * as API from "./utils/BookAPI";
+import { Header } from "semantic-ui-react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Main from "./components/Main/Main";
+import Search from './components/Search/Search';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      books: [],
+    };
+  }
+
+  componentDidMount() {
+    API.getAll().then(data => {
+      this.setState({ books: data });
+    });
+  }
+
+  handleShelfChange = (book, shelf) => {
+    API.update(book, shelf)
+    API.getAll().then(data => {
+      this.setState({books: data})
+    })
+  }
+
+  render() {
+    return (
+      <Router>
+        <div className='App'>
+          <Header as='h1' textAlign='center'>
+            MyReads
+          </Header>
+          <Switch>
+            <Route path='/' exact render={() => <Main books={this.state.books} changeShelves={this.handleShelfChange} />} />
+            <Route path='/search' render={() => <Search books={this.state.books} changeShelves={this.handleShelfChange} />} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
-
-export default App;
