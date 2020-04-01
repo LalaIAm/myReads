@@ -1,8 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+When downloading the app, install dependencies by running npm install or yarn in the project's root directory. 
 
-In the project directory, you can run:
+After running the app the first time, you will see a collection of book shelves, with your books sorted by past, present, and current reads. The dropdown allows you to switch apps between shelves.
+
+The menu will allow you to switch between the main bookshelf screen and the search screen. This is where you can find new books to add to your collection.
+
+
+## Available Scripts
 
 ### `npm start`
 
