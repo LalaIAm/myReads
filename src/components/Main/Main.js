@@ -26,7 +26,7 @@ export default class Main extends Component {
   
   render() {
     return (
-      <div>
+      <div className='page'>
         <Header as='h2' textAlign='center'>
           MyShelves
         </Header>
@@ -36,13 +36,15 @@ export default class Main extends Component {
                <BookList
                 changeShelves={this.props.changeShelves}
                 books={this.getFutureReads()}
-                shelf={"Future Reads"}/>
+                shelf={"Future Reads"}
+                booksInRow={3}/>
             </Grid.Column>
             <Grid.Column>
               <BookList
                 changeShelves={this.props.changeShelves}
                 books={this.getCurrentReads()}
                 shelf={"Current Reads"}
+                booksInRow={3}
               />
             </Grid.Column>
             <Grid.Column>
@@ -51,6 +53,7 @@ export default class Main extends Component {
                 changeShelves={this.props.changeShelves}
                 books={this.getPastReads()}
                 shelf={"Past Reads"}
+                booksInRow={3}
               />
             </Grid.Column>
           </Grid.Row>

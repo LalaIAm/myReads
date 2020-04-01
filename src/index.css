@@ -1,0 +1,41 @@
+.card-action {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    margin-left: 1rem;
+
+}
+
+.dropdown {
+    margin-right: 10px;
+    
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-menu h2 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.sidebar-list {
+    list-style: none;
+}
+
+.page {
+    height: 95vh;
+}
+
+.sidebar-list li {
+    padding: 3rem;
+    font-size: 2rem;
+}
+

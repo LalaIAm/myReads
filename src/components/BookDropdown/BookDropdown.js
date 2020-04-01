@@ -21,13 +21,13 @@ export default class BookDropdown extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <select value={this.state.value} onChange={this.handleChange}>
+        <select className='dropdown' value={this.state.value} onChange={this.handleChange}>
           <option value=''>Shelf</option>
           <option value='read'>Past Read</option>
           <option value='currentlyReading'>Current Read</option>
           <option value='wantToRead'>Future Read</option>
         </select>
-        <Button type='submit'>Switch Shelves</Button>
+        <Button className='btn' type='submit'>Switch Shelves</Button>
       </form>
     );
   }
