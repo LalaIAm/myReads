@@ -6,7 +6,7 @@ import "semantic-ui-less/semantic.less";
 import "./index.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import SideBar from "./components/SideBar/SideBar";
-import * as Sentry from '@sentry/browser';
+import * as Sentry from "@sentry/browser";
 
 Sentry.init({
   dsn: "https://41be231c64f24c01a1a944812499526d@sentry.io/5184466",
