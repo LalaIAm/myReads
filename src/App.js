@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import * as API from "./utils/BookAPI";
-import { Header } from "semantic-ui-react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Search from "./components/Search/Search";
-import Sidebar from "./components/SideBar/SideBar";
 
 export default class App extends Component {
   constructor(props) {
@@ -12,7 +10,7 @@ export default class App extends Component {
 
     this.state = {
       books: [],
-      foundBooks: [],
+      query: "",
     };
   }
 
@@ -29,8 +27,11 @@ export default class App extends Component {
     });
   };
 
-  handleSearch = query => {
-    API.search(query).then(data => {
+  updateQuery = query => {
+    this.setState(() => ({
+      query: query,
+    }));
+    API.search(this.state.query).then(data => {
       this.setState({
         foundBooks: data,
       });
@@ -56,8 +57,8 @@ export default class App extends Component {
             <Search
               books={this.state.foundBooks}
               changeShelves={this.handleShelfChange}
-              searchBooks={this.handleSearch}
-              changeShelves={this.handleShelfChange}
+              updateQuery={this.updateQuery}
+              query={this.state.query}
             />
           )}
         />

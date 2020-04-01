@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Card, Image, Dropdown } from "semantic-ui-react";
-import BookDetails from "../BookDetails/BookDetails";
-import * as API from "../../utils/BookAPI";
+import { Card, Image, Icon } from "semantic-ui-react";
+import BookDetails from "../BookDetails/BookDetails"
 import BookDropdown from "../BookDropdown/BookDropdown";
 
 export default class BookCard extends Component {
@@ -21,15 +20,19 @@ export default class BookCard extends Component {
   };
 
   render() {
-    const book = this.props.book;
-    const value = this.state;
+    const { book, icon } = this.props;
+    let authors = book.authors;
+    if (Array.isArray(authors)) {
+      authors = authors.toString()
+    }
+    
     return (
-      <Card raised>
+      <Card>
         <Card.Content>
-          {this.props.book.imageLinks.smallThumbnail && (
+          {book && book.imageLinks.smallThumbnail && (
             <Image
-              fluid={true}
-              src={this.props.book.imageLinks.smallThumbnail || ""}
+              
+              src={book.imageLinks.smallThumbnail || ""}
               wrapped
               floated='right'
               size='mini'
@@ -38,13 +41,14 @@ export default class BookCard extends Component {
           <Card.Header>{book.title}</Card.Header>
           <Card.Meta>{book.subtitle}</Card.Meta>
           <Card.Description>
-            <p>by {book.authors} </p>
+            <p>
+              <span> <Icon circular name={icon} color='teal' /> </span> by {authors}</p>
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
           <div className='card-action'>
             <BookDetails book={book} />
-            <BookDropdown switchShelves={this.switchShelves} />
+            <BookDropdown changeShelves={this.switchShelves} />
           </div>
         </Card.Content>
       </Card>

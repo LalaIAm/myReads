@@ -1,14 +1,5 @@
 import React, { useState, useRef } from "react";
-import {
-  Header,
-  Image,
-  Menu,
-  Ref,
-  Segment,
-  Sidebar,
-  Button,
-  Dimmer,
-} from "semantic-ui-react";
+import { Menu, Ref, Segment, Sidebar, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 const SideBar = ({ children }) => {

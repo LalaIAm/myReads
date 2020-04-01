@@ -10,6 +10,10 @@
 
 .dropdown {
     margin-right: 10px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding: .3rem;
+    border-radius: 5px;
     
 }
 
@@ -39,3 +43,12 @@
     font-size: 2rem;
 }
 
+.form {
+    max-width: 40%;
+    margin: 0 auto;
+    
+}
+
+.search-btn {
+    margin: 0 auto;
+}

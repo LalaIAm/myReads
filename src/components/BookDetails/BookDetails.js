@@ -3,7 +3,7 @@ import { Modal, Button, Image, Header } from "semantic-ui-react";
 
 const BookDetails = ({ book }) => {
   return (
-    <Modal trigger={<Button>Book Details</Button>}>
+    <Modal trigger={<Button primary>Book Details</Button>}>
       <Modal.Header>{book.title}</Modal.Header>
       <Modal.Content>
         <Image

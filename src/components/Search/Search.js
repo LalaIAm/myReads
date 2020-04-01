@@ -10,7 +10,7 @@ export default class Search extends Component {
         <Header as='h2' textAlign='center'>
           Search
         </Header>
-        <SearchForm searchBooks={this.props.searchBooks} />
+        <SearchForm query={this.props.query} updateQuery={this.props.updateQuery} />
         <BookList
           books={this.props.books}
           booksInRow={6}

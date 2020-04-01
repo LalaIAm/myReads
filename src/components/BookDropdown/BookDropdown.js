@@ -15,7 +15,7 @@ export default class BookDropdown extends Component {
 
   handleSubmit = event => {
       event.preventDefault();
-      this.props.switchShelves(this.state.value)
+      this.props.changeShelves(this.state.value)
   };
 
   render() {
@@ -27,7 +27,7 @@ export default class BookDropdown extends Component {
           <option value='currentlyReading'>Current Read</option>
           <option value='wantToRead'>Future Read</option>
         </select>
-        <Button className='btn' type='submit'>Switch Shelves</Button>
+        <Button secondary className='btn' type='submit'>Switch Shelves</Button>
       </form>
     );
   }
