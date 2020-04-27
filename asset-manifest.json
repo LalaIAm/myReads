@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/MyReads/static/css/main.83f5e30e.chunk.css",
+    "main.js": "/MyReads/static/js/main.f97ab51d.chunk.js",
+    "main.js.map": "/MyReads/static/js/main.f97ab51d.chunk.js.map",
+    "runtime-main.js": "/MyReads/static/js/runtime-main.920ae23a.js",
+    "runtime-main.js.map": "/MyReads/static/js/runtime-main.920ae23a.js.map",
+    "static/css/2.56d94a5e.chunk.css": "/MyReads/static/css/2.56d94a5e.chunk.css",
+    "static/js/2.1cc4d76e.chunk.js": "/MyReads/static/js/2.1cc4d76e.chunk.js",
+    "static/js/2.1cc4d76e.chunk.js.map": "/MyReads/static/js/2.1cc4d76e.chunk.js.map",
+    "index.html": "/MyReads/index.html",
+    "precache-manifest.5c5405558dbc932918898d7a98944fa2.js": "/MyReads/precache-manifest.5c5405558dbc932918898d7a98944fa2.js",
+    "service-worker.js": "/MyReads/service-worker.js",
+    "static/css/2.56d94a5e.chunk.css.map": "/MyReads/static/css/2.56d94a5e.chunk.css.map",
+    "static/css/main.83f5e30e.chunk.css.map": "/MyReads/static/css/main.83f5e30e.chunk.css.map",
+    "static/js/2.1cc4d76e.chunk.js.LICENSE.txt": "/MyReads/static/js/2.1cc4d76e.chunk.js.LICENSE.txt",
+    "static/media/semantic.less": "/MyReads/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.920ae23a.js",
+    "static/css/2.56d94a5e.chunk.css",
+    "static/js/2.1cc4d76e.chunk.js",
+    "static/css/main.83f5e30e.chunk.css",
+    "static/js/main.f97ab51d.chunk.js"
+  ]
+}
