@@ -20,13 +20,16 @@
 	"devDependencies": {
 		"@craco/craco": "^5.6.4",
 		"@semantic-ui-react/craco-less": "^1.2.1",
+		"gh-pages": "^2.2.0",
 		"semantic-ui-less": "^2.4.1"
 	},
 	"scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
 		"start": "craco start",
 		"build": "craco build",
 		"test": "craco test",
-		"eject": "craco eject"
+    "eject": "craco eject"
 	},
 	"browserslist": {
 		"production": [
@@ -53,5 +56,5 @@
 	"bugs": {
 		"url": "https://github.com/LalaIAm/MyReads/issues"
 	},
-	"homepage": "https://github.com/LalaIAm/MyReads#readme"
+	"homepage": "https://LalaIAm.github.io/MyReads"
 }
